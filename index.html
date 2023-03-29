@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="User name" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Sign up</button>
+            </form>
+        </div>
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="WA name" required="" id="waNameFeild">
+                <input type="password" name="pswd" placeholder="WA Number" required="" id="waNumberFiled">
+                <button onclick="logIn()">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://otpless.com/auth.js"></script>
+    <!-- Get user's whatsapp number and name -->
+    <script type="text/javascript">
+        function otpless(otplessUser) {
+            var waName = otplessUser.waName;
+            var waNumber = otplessUser.waNumber;
+
+            // Signup/signin the user and redirect to next page
+        }
+
+        function logIn() {
+            var waNameInput = document.getElementById("waNameFeild");
+            var waNumberInput = document.getElementById("waNumberFiled");
+            console.log("waNameInput");
+            console.log("waNumberInput");
+        }
+    </script>
+</body>
+
+</html>
